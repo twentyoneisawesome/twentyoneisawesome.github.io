@@ -10,11 +10,8 @@
 <body style="margin:0;padding:0">
 <script>
   var url = location.href;
-  if (url.indexOf('?') != -1) {
-    var ary1 = url.split('?');
-    var ary2 = ary1[1].split('&');
-    var ary3 = ary2[0].split('=');
-    var redirectUrl = ary3[1];
+  if (url.indexOf('?redirectUrl=') != -1) {
+    var redirectUrl = url.split('?redirectUrl=')[1];
     console.log('will redirect to: ', redirectUrl);
     setTimeout(function () {
       window.location.href = redirectUrl;
