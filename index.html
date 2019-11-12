@@ -5,12 +5,22 @@
     <meta name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Document</title>
 </head>
 <body style="margin:0;padding:0">
 <script>
+  var url = location.href;
+  if (url.indexOf('?') != -1) {
+    var ary1 = url.split('?');
+    var ary2 = ary1[1].split('&');
+    var ary3 = ary2[0].split('=');
+    var redirectUrl = ary3[1];
+    console.log('redirect ', redirectUrl);
+    setTimeout(function () {
+      window.location.href = redirectUrl;
+    }, 3000);
+  }
 </script>
-<div id="timed"></div>
+<div id="timed">Delay Redirect</div>
 </body>
 </html>
