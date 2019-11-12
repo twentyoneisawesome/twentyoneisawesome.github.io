@@ -15,7 +15,7 @@
     var ary2 = ary1[1].split('&');
     var ary3 = ary2[0].split('=');
     var redirectUrl = ary3[1];
-    console.log('redirect ', redirectUrl);
+    console.log('will redirect to: ', redirectUrl);
     setTimeout(function () {
       window.location.href = redirectUrl;
     }, 3000);
