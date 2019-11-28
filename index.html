@@ -11,11 +11,11 @@
 <script>
   var url = location.href;
   if (url.indexOf('?redirectUrl=') != -1) {
-    var redirectUrl = url.split('?redirectUrl=')[1];
+    var redirectUrl = url.split('?redirectUrl=')[1].toString();
     console.log('will redirect to: ', redirectUrl);
     setTimeout(function () {
-      window.location.href = 'https://web-consultation-demo.perfectcorp.com/index_nordstrom_makeup.html?sdkUrl=https%3A%2F%2Fweb-consultation-demo.perfectcorp.com%2Fc13713_20191112-105731%2Fsdk.js&apiKey=oXbgagVt36esHb1ieKV9Rw%3D%3D';
-    }, 5000);
+      window.location.href = redirectUrl;
+    }, 10000);
   }
 </script>
 <div id="timed">Delay Redirect</div>
