@@ -19,16 +19,6 @@
     <title>Document</title>
 </head>
 <body style="margin:0;padding:0">
-<script>
-  var url = location.href;
-  if (url.indexOf('?redirectUrl=') != -1) {
-    var redirectUrl = url.split('?redirectUrl=')[1].toString();
-    console.log('will redirect to: ', redirectUrl);
-    setTimeout(function () {
-      window.location.href = redirectUrl;
-    }, 10000);
-  }
-</script>
-<div id="timed">Delay Redirect</div>
+<script>(function(){location.href = 'https://dev.perfectcorp.com/';})();</script>
 </body>
 </html>
